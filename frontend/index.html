@@ -1,0 +1,10 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adrobot · Кампании</title><link rel="stylesheet" href="style.css"><script src="campaign.js" defer></script></head><body><main>
+<header><b>Adrobot</b><span id="mode"></span><a href="/docs">API</a></header>
+<nav><button id="tabEditor">Редактор</button><button id="tabCreate">Создать кампанию</button></nav>
+<section id="editor"><h1>Редактор кампании</h1><label>Кампания<select id="campaign"></select></label><button id="refresh">Обновить из трекера</button><div id="flows"></div></section>
+<section id="creator" hidden><h1>Создание кампании</h1><form id="createForm">
+<label>Название<input name="name" required maxlength="255"></label>
+<label>Страна<input name="country_code" list="countries" required placeholder="Германия или DE"><datalist id="countries"></datalist></label>
+<label>Оффер<select name="offer_id" required></select></label><label>Домен<select name="domain_id" required></select></label>
+<label>Группа<select name="group_id" required></select></label><label>Источник<select name="traffic_source_id" required></select></label>
+<button>Создать</button></form></section><p id="msg" role="status"></p></main></body></html>
